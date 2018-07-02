@@ -1,0 +1,37 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    <h1>ASP.NET</h1>
+    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
+    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+</div>
+
+@*Aula 2*@
+@*ng-app = indica onde começa a aplicação*@
+@*ng-init = nos permite inicializar uma variavel*@
+<div class="row" ng-app="" ng-init="valor1 = 5; pessoa = {nome:'Alessandra'}">
+    <div class="col-md-12">
+        <h1 ng-bind="valor1"></h1>
+        <input type="text" ng-model="texto" />
+        <label>Exibe aqui o que foi digitado no input = {{texto}}</label>
+        <br />
+        <label>{{pessoa.nome}}</label>
+    </div>
+
+</div>
+
+@*Aula05*@
+<div class="row" ng-app="appSaudacao">
+    <div class="col-md-12" >
+        @*Aplicação de saudação*@
+        {{'Alessandra' | ola}}
+    </div>
+
+    <div class="col-md-12">
+        @*Aplicação de mensagens*@
+    </div>
+
+</div>

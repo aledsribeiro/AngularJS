@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewBag.Title = "Aula08";
+}
+<script src="~/Scripts/Angular/app.module.js"></script>
+<script src="~/Scripts/Angular/Aula08Controller.js"></script>
+<style>
+    input.ng-invalid.ng-touched{
+        background:red;
+    }
+    input.ng-valid.ng-touched {
+        background: green;
+    }
+</style>
+<h2>Aula08</h2>
+
+<div class="row" ng-app="app">
+    <div class="col-md-12" ng-controller="Aula08Controller">
+        <form name="frm" novalidate ng-submit="SalvarPessoa(Pessoa);">
+            <p>
+                Nome : <input name="txtNome" type="text" ng-model="Pessoa.nome" required />
+                <div ng-show="frm.$submitted || frm.txtNome.$touched">
+                    <div ng-show="frm.txtNome.$error.required">
+                        O campo deve ser preenchido
+                    </div>
+                </div>
+            </p>
+            <p>
+                E-mail : <input type="email" ng-model="Pessoa.email" required />
+            </p>
+            <p>
+                Sexo :
+                <input type="radio" value="F" ng-model="Pessoa.sexo" /> Feminino
+                <input type="radio" value="M" ng-model="Pessoa.sexo" /> Masculino
+            </p>
+            <p>
+                <input type="submit" value="Salvar" ng-disabled="frm.$invalid" />
+                <input type="button" value="Resetar" />
+            </p>
+            <p>
+                Estado:
+                <select ng-model="Pessoa.estado">
+                    <option ng-repeat="estado in Estados" ng-selected="estado == Pessoa.estado" value="{{estado}}">{{estado}}</option>
+                </select>
+            </p>
+
+            <pre>
+{{Pessoa | json}}
+
+</pre>
+            <pre>
+{{Pessoas | json}}
+</pre>
+        </form>
+    </div>
+
+</div>
+
+
+

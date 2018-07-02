@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Aula07";
+}
+<script src="~/Scripts/Angular/app.module.js"></script>
+<script src="~/Scripts/Angular/aula07Controller.js"></script>
+<h2>Aula07</h2>
+
+<div class="row" ng-app="app">
+    <div class="col-md-12" ng-controller="aula07Controller">
+        <ul>
+            <li ng-repeat="nome in listaNomes">{{nome}}</li>
+        </ul>
+
+        <ul>
+            <li ng-repeat="pessoa in Pessoas">{{pessoa.nome}}</li>
+        </ul>
+
+        <input type="text" id="txtNomePessoa" />
+        <button type="button" ng-click="adicionarPessoa();">Adicionar Pessoa</button>
+
+    </div>
+
+</div>
+

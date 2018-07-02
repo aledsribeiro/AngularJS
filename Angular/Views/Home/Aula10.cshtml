@@ -1,0 +1,18 @@
+﻿
+@{
+    ViewBag.Title = "Aula10";
+}
+<script src="~/Scripts/Angular/app.module.js"></script>
+<script src="~/Scripts/Angular/Aula10Filter.js"></script>
+<script src="~/Scripts/Angular/Aula10Controller.js"></script>
+<h2>Aula10</h2>
+<div class="row" ng-app="app">
+    <div class="col-md-12" ng-controller="Aula10Controller">
+        {{ (Pessoa | json) | uppercase}}
+        <br />
+        {{ Pessoa.Nome}}
+    </div>
+
+</div>
+
+

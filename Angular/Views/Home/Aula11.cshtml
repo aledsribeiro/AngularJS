@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Aula11";
+}
+
+<base href="/" />
+<script src="~/Scripts/Angular/Aula11Controller.js"></script>
+<h2>Aula11</h2>
+<div class="row" ng-app="app">
+    <div class="col-md-12" ng-controller="Aula11Controller">
+     <ul>
+         <li>
+             <a href="/">Inicial</a>
+             <a href="Pagina1">Pagina 1</a>
+             <a href="Pagina2/1">Pagina 2</a>
+         </li>
+     </ul>
+        <div ng-view></div>
+    </div>
+
+</div>
+
+
